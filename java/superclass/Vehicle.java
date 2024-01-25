@@ -2,7 +2,7 @@
 class Vehicle {
   private String name;
   private String color;
-  private int distance = 0;
+  protected int distance = 0;
 
   public String getName() {
     return this.name;
