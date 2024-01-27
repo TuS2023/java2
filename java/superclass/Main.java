@@ -4,10 +4,11 @@ class Main {
     Person person2 = new Person("John", "Christopher", "Smith", 65, 1.75, 80.0);
 
     Car car = new Car("フェラーリ", "赤");
-    car.setOwner(person1);
-    
     Bicycle bicycle = new Bicycle("ビアンキ", "緑");
-    bicycle.setOwner(person2);
+    
+    person1.buy(car);
+    
+    person2.buy(bicycle);
 
     System.out.println("【車の情報】");
     car.printData();
@@ -21,6 +22,5 @@ class Main {
     System.out.println("-----------------");
     System.out.println("【自転車の所有者の情報】");
     bicycle.getOwner().printData();
-    
   }
 }
