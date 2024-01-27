@@ -1,8 +1,12 @@
-// CarクラスとBicycleクラスの共通部分を移動
-class Vehicle {
+abstract class Vehicle {
   private String name;
   private String color;
   protected int distance = 0;
+
+  Vehicle(String name, String color) {
+    this.name = name;
+    this.color = color;
+  }
 
   public String getName() {
     return this.name;
@@ -24,4 +28,8 @@ class Vehicle {
     System.out.println("色：" + this.color);
     System.out.println("走行距離：" + this.distance + "km");
   }
+  
+  // 抽象メソッドrunを定義してください
+  public abstract void run(int distance);
+  
 }
